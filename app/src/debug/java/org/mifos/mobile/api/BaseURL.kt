@@ -2,7 +2,7 @@ package org.mifos.mobile.api
 
 /**
  * @author Vishwajeet
- * @since 09/06/16
+ * @since 09/06/23
  */
 class BaseURL {
     val url: String? = null
