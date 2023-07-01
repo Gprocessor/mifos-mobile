@@ -2,7 +2,18 @@ package org.mifos.mobile.api
 
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
+
+import java.security.KeyStore
+import java.security.SecureRandom
+import java.security.cert.CertificateException
+import java.security.cert.X509Certificate
+import java.util.*
 import java.util.concurrent.TimeUnit
+
+import javax.net.ssl.SSLContext
+import javax.net.ssl.TrustManager
+import javax.net.ssl.TrustManagerFactory
+import javax.net.ssl.X509TrustManager
 
 class SelfServiceOkHttpClient(private val tenant: String?, private val authToken: String?) {
     // Create a trust manager that does not validate certificate chains
